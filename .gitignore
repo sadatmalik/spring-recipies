@@ -55,11 +55,11 @@ local.properties
 .idea*
 *.iml
 out/
+target/*
 *.iws
 *.ipr
 *.ids
 *.orig
-target/*
 
 ######################
 # Visual Studio Code
