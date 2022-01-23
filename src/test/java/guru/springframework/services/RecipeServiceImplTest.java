@@ -37,7 +37,7 @@ class RecipeServiceImplTest {
 
         Set<Recipe> recipes = recipeService.getRecipes();
 
-        assertEquals(recipes.size(), 0);
+        assertEquals(recipes.size(), 1);
 
         // ensure that recipeRepository.findAll()
         // called only once:
