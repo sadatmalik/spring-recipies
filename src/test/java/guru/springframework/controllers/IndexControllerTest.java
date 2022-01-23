@@ -2,7 +2,7 @@ package guru.springframework.controllers;
 
 import guru.springframework.domain.Recipe;
 import guru.springframework.services.RecipeService;
-import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
@@ -31,7 +31,7 @@ public class IndexControllerTest {
 
     IndexController controller;
 
-    @Before("")
+    @BeforeEach
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
