@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8"/>
-  <title>Show Recipe</title>
+  <title>Recipe Form</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -95,7 +95,7 @@
                   <h1 class="panel-title">Ingredients</h1>
                 </div>
                 <div class="col-md-1">
-                  <a class="btn btn-default" href="#" role="button">Edit</a>
+                  <a class="btn btn-default" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
                 </div>
               </div>
             </div>
@@ -108,8 +108,8 @@
                     <li>asdf</li>
                     <li th:each="ingredient : ${recipe.ingredients}"
                         th:text="${(ingredient.getAmount() +
-                                        ' ' + ingredient.uom.getDescription() +
-                                        ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar
+                     ' ' + ingredient.uom.getDescription() +
+                     ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar
                     </li>
                   </ul>
                 </div>
