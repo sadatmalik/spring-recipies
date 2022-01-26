@@ -1,6 +1,5 @@
 package guru.springframework.controllers;
 
-import guru.springframework.domain.Recipe;
 import guru.springframework.services.RecipeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -21,8 +20,7 @@ public class IndexController {
     public String getIndexPage(Model model) {
         log.debug("Getting Index page");
 
-        Iterable<Recipe> recipes = recipeService.getRecipes();
-        model.addAttribute("recipes", recipes);
+        model.addAttribute("recipes", recipeService.getRecipes());
         return "index";
     }
 }
